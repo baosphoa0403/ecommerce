@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ecommerce/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "ecommerce:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "ecommerce:build:development"
+        },
+        "production": {
+          "buildTarget": "ecommerce:build:production"
+        }
+      }
+    }
+  }
+}
