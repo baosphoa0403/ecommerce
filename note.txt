@@ -1,4 +1,6 @@
 cd ecommerce
-nx generate @nrwl/nest:app name
+npx nx generate @nrwl/nest:app name
 
 
+create libary
+npx nx g @nx/nest:lib libs
