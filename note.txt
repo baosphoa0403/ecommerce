@@ -1,0 +1,4 @@
+cd ecommerce
+nx generate @nrwl/nest:app name
+
+
