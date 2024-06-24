@@ -1,0 +1,36 @@
+version: '3.5'
+
+services:
+  product-catalog-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123
+    container_name: product-catalog-db
+    volumes:
+      - ./product-catalog-db-pgdata:/var/lib/postgresql/data
+    ports:
+      - '5432:5432'
+  order-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123
+    container_name: order-db
+    volumes:
+      - ./order-db-pgdata:/var/lib/postgresql/data
+    ports:
+      - '5433:5432'
+  inventory-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123
+    container_name: inventory-db
+    volumes:
+      - ./inventory-db-pgdata:/var/lib/postgresql/data
+    ports:
+      - '5434:5432'

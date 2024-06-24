@@ -40,3 +40,7 @@ Thumbs.db
 
 .nx/cache
 .nx/workspace-data
+
+/docker/inventory-db-pgdata
+/docker/order-db-pgdata
+/docker/product-catalog-db-pgdata
