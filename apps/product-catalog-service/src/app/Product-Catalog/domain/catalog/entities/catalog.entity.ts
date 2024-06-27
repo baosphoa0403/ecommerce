@@ -9,8 +9,11 @@ export class CatalogEntity {
   @Column()
   name: string
 
-  @Column()
+  @Column({nullable: true})
   parentId: string
+
+  @Column()
+  level: number
 
   @OneToMany(()=> ProductEntity, product => product.catalogEntity)
   productEntities: ProductEntity[]

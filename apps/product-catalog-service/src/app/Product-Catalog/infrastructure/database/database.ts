@@ -24,7 +24,9 @@ export const runMigration = async () => {
       console.log("Data Source has been initialized!")
       console.info("Run Migrations")
       const migrations = await dataSource.runMigrations();
-      console.table(migrations);
+      if (migrations.length > 0)  {
+        console.table(migrations);
+      }
     }
   }catch (error){
     console.error("Error during Data Source initialization", error)
