@@ -7,7 +7,9 @@ import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app/app.module';
-import { runMigration } from './app/Product-Catalog/infrastructure/database/database';
+
+import { runMigration, ServiceEnum } from '@ecommerce/libs';
+import { dataSource } from './app/product-catalog/infrastructure/database/database';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -16,9 +18,9 @@ async function bootstrap() {
   const port = process.env.PORT || 3000;
   await app.listen(port);
   // run migrations
-  await runMigration();
+  await runMigration(dataSource);
   Logger.log(
-    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
+    `🚀 ${ServiceEnum.ProductCatalogService} Application is running on: http://localhost:${port}/${globalPrefix}`
   );
 }
 

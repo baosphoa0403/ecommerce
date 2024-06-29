@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start:product-catalog": "nx serve product-catalog-service"
+    "start:product-catalog": "nx serve product-catalog-service",
+    "start:user": "nx serve user-service"
   },
   "private": true,
   "dependencies": {
