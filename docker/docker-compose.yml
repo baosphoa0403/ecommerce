@@ -34,3 +34,14 @@ services:
       - ./inventory-db-pgdata:/var/lib/postgresql/data
     ports:
       - '5434:5432'
+  user-db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123
+    container_name: user-db
+    volumes:
+      - ./user-db-pgdata:/var/lib/postgresql/data
+    ports:
+      - '5435:5432'

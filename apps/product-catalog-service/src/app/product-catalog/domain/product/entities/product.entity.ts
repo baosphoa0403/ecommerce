@@ -1,5 +1,5 @@
 import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
-import {CatalogEntity} from "../../catalog/entities/catalog.entity";
+import { CatalogEntity } from '../../catalog/entities/catalog.entity';
 
 
 @Entity("products")

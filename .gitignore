@@ -44,3 +44,4 @@ Thumbs.db
 /docker/inventory-db-pgdata
 /docker/order-db-pgdata
 /docker/product-catalog-db-pgdata
+/docker/user-db-pgdata
