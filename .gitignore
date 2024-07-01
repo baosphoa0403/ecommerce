@@ -45,3 +45,9 @@ Thumbs.db
 /docker/order-db-pgdata
 /docker/product-catalog-db-pgdata
 /docker/user-db-pgdata
+
+/apps/api-gateway/.env
+/apps/product-catalog-service/.env
+/apps/user-service/.env
+/apps/order-service/.env
+

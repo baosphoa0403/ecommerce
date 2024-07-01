@@ -6,10 +6,17 @@ export enum  GenderEnum {
 }
 
 export enum ServiceEnum {
+  ApiGateWay = "ApiGateWay",
   ProductCatalogService = "ProductCatalogService",
-  UserService = "UserService"
+  UserService = "UserService",
+  OrderService = "OrderService"
 }
 
+export interface IEnvironment {
+  APP_PORT: string;
+  APP_NAME: string;
+  ENABLE_MIGRATE: string;
+}
 
 export const runMigration = async (dataSource: DataSource) => {
   try {
