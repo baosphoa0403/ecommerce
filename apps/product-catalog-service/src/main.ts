@@ -10,12 +10,14 @@ import { AppModule } from './app/app.module';
 
 import { runMigration, ServiceEnum } from '@ecommerce/libs';
 import { dataSource } from './app/product-catalog/infrastructure/database/database';
+import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const configService =  app.get(ConfigService);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  const port = process.env.PORT || 3000;
+  const port = configService.get("APP_PORT");
   await app.listen(port);
   // run migrations
   await runMigration(dataSource);
