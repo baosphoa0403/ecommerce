@@ -4,3 +4,6 @@ npx nx generate @nrwl/nest:app name
 
 create libary
 npx nx g @nx/nest:lib libs
+
+
+docker compose -f docker-compose.kafka.yml up
