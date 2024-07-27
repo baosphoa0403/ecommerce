@@ -14,10 +14,10 @@ import { IEnvironment } from '@ecommerce/libs';
       validationSchema: Joi.object<IEnvironment>({
         APP_NAME: Joi.string().required(),
         APP_PORT: Joi.number().port().required(),
-        ENABLE_MIGRATE: Joi.boolean().required()
+        ENABLE_MIGRATE: Joi.boolean().required(),
       }),
-      envFilePath: "../../.env"
-    })
+      envFilePath: '../../.env',
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

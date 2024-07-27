@@ -6,18 +6,20 @@ import { DatabaseModule } from './user/infrastructure/database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import Joi from 'joi';
 import { IEnvironment } from '@ecommerce/libs';
+import { UserModule } from 'apps/user-service/src/app/user.module';
 
 @Module({
   imports: [
-    DatabaseModule,
     ConfigModule.forRoot({
       validationSchema: Joi.object<IEnvironment>({
         APP_NAME: Joi.string().required(),
         APP_PORT: Joi.number().port().required(),
-        ENABLE_MIGRATE: Joi.boolean().required()
+        ENABLE_MIGRATE: Joi.boolean().required(),
       }),
-      envFilePath: "../../.env"
-    })
+      envFilePath: '../../.env',
+    }),
+    DatabaseModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
