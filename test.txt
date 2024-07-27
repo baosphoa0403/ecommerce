@@ -1,0 +1,80 @@
+project-root/
+│
+├── api-gateway/
+│   ├── src/
+│   │   ├── application/
+│   │   │   └── commands/
+│   │   │       └── register-user.command.ts
+│   │   ├── domain/
+│   │   │   └── interfaces/
+│   │   │       └── user.interface.ts
+│   │   ├── infrastructure/
+│   │   │   ├── kafka/
+│   │   │   │   └── kafka.service.ts
+│   │   │   └── config/
+│   │   │       └── kafka.config.ts
+│   │   ├── presentation/
+│   │   │   ├── controllers/
+│   │   │   │   └── register.controller.ts
+│   │   │   └── dtos/
+│   │   │       └── register-user.dto.ts
+│   │   └── main.ts
+│   └── package.json
+│
+├── auth-service/
+│   ├── src/
+│   │   ├── application/
+│   │   │   ├── commands/
+│   │   │   │   └── create-token.command.ts
+│   │   │   ├── handlers/
+│   │   │   │   └── create-token.handler.ts
+│   │   │   └── services/
+│   │   │       └── auth.service.ts
+│   │   ├── domain/
+│   │   │   ├── interfaces/
+│   │   │   │   └── token.interface.ts
+│   │   │   └── models/
+│   │   │       └── token.model.ts
+│   │   ├── infrastructure/
+│   │   │   ├── kafka/
+│   │   │   │   └── kafka.service.ts
+│   │   │   └── config/
+│   │   │       └── kafka.config.ts
+│   │   ├── presentation/
+│   │   │   └── controllers/
+│   │   │       └── auth.controller.ts
+│   │   └── main.ts
+│   └── package.json
+│
+└── user-service/
+    ├── src/
+    │   ├── application/
+    │   │   ├── commands/
+    │   │   │   └── create-user.command.ts
+    │   │   ├── handlers/
+    │   │   │   └── create-user.handler.ts
+    │   │   ├── events/
+    │   │   │   └── user-created.event.ts
+    │   │   └── services/
+    │   │       └── user.service.ts
+    │   ├── domain/
+    │   │   ├── interfaces/
+    │   │   │   └── user.interface.ts
+    │   │   ├── models/
+    │   │   │   └── user.model.ts
+    │   │   └── repositories/
+    │   │       └── user.repository.interface.ts
+    │   ├── infrastructure/
+    │   │   ├── kafka/
+    │   │   │   └── kafka.service.ts
+    │   │   ├── config/
+    │   │   │   └── kafka.config.ts
+    │   │   ├── database/
+    │   │   │   └── database.module.ts
+    │   │   └── repositories/
+    │   │       └── user.repository.ts
+    │   ├── presentation/
+    │   │   └── controllers/
+    │   │       └── user.controller.ts
+    │   └── main.ts
+    └── package.json
